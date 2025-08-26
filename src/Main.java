@@ -1,16 +1,26 @@
 public class Main {
-
     public static void main(String[] args) {
 
+        //Classe usuario
+        Usuario usuario = new Usuario("Lucas", "lucas@email.com", "02982783");
+        usuario.                                                                         listarUsuario();
 
-//        // Autenticação
-//        Autenticacao auth = new Autenticacao();
-//        auth.autenticar(login.username, login.password);
-//        auth.encerrarSessao();
+        //Classe login
+        Login login = new Login("lucas", "123456");
+        login.doLogin();
+        login.doLogout();
 
-
-        // Registro de transação
-        Transacao transacao = new Transacao("Conta de agua", 150, "Despesa");
+        //Classe transacao
+        Transacao transacao = new Transacao("Depósito", 500, "Receita");
         transacao.listarTransacao();
+        System.out.println("Transação registrada para o usuário: " + usuario.nome);
+
+        //
+        Categoria categoriaDespesa = new Categoria(1, "Despesas Fixas", "Despesas mensais recorrentes");
+        categoriaDespesa.exibirCategoria();
+
+        Autenticacao auth = new Autenticacao();
+        auth.autenticar(login.username, login.password);
+        auth.encerrarSessao();
     }
 }
