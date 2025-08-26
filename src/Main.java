@@ -11,7 +11,7 @@ public class Main {
         login.doLogout();
 
         //Classe transacao
-        Transacao transacao = new Transacao("Conta de água", 150, "Despesa");
+        Transacao transacao = new Transacao("Depósito", 500, "Receita");
         transacao.listarTransacao();
         System.out.println("Transação registrada para o usuário: " + usuario.nome);
 
