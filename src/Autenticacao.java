@@ -9,6 +9,7 @@ public class Autenticacao {
 
     // Métodos (sem lógica real)
     public void autenticar(String username, String password) {
+        System.out.println("-------------------------------");
         System.out.println("Autenticação do usuario realizada.");
     }
 
